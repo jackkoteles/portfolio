@@ -10,8 +10,8 @@ export default function Background() {
         timeScale={0.5}
         pause={false}
         scanlineIntensity={0}
-        glitchAmount={1}
-        flickerAmount={1}
+        glitchAmount={0}
+        flickerAmount={0}
         noiseAmp={1}
         chromaticAberration={0}
         dither={0}
@@ -20,7 +20,7 @@ export default function Background() {
         mouseReact
         mouseStrength={0.2}
         pageLoadAnimation
-        brightness={0.5}
+        brightness={0.65}
       />
     </div>
   );
