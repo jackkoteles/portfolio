@@ -220,12 +220,12 @@ function hexToRgb(hex) {
 }
 
 export default function FaultyTerminal({
-  scale = 1,
+  scale = 1.5,
   gridMul = [2, 1],
   digitSize = 1.5,
   timeScale = 0.3,
   pause = false,
-  scanlineIntensity = 0.3,
+  scanlineIntensity = 0,
   glitchAmount = 1,
   flickerAmount = 1,
   noiseAmp = 0,
