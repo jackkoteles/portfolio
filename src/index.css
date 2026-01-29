@@ -3,7 +3,8 @@ html, body, #root {
   height: 100%;
   margin: 0;
 }
+
 body {
   background: black;
-  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

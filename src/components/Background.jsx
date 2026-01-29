@@ -9,7 +9,7 @@ export default function Background() {
         digitSize={1.2}
         timeScale={0.5}
         pause={false}
-        scanlineIntensity={0.5}
+        scanlineIntensity={0}
         glitchAmount={1}
         flickerAmount={1}
         noiseAmp={1}
