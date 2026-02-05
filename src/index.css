@@ -1,10 +1,158 @@
-html, body, #root {
-  width: 100%;
-  height: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* global */
 body {
-  background: black;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: #000;
+}
+
+/* landing section */
+.landing {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: #ffffff; /* base stays static */
+  overflow: hidden;
+}
+
+/* gradient layer */
+.landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    #5a85b6 0%,
+    #f3f6fb 45%,
+    #ffffff 85%,
+    #ffffff 100%
+  );
+
+  opacity: 0;
+  animation: gradientFadeIn 1.2s ease-out forwards;
+  z-index: 0;
+}
+
+/* keep content above gradient */
+.landing > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes gradientFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* name at bottom */
+.name-title {
+  width: 100%;
+  padding-left: 24px;
+  padding-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 17vw;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.blurb {
+  padding-left: 24px;
+  margin-bottom: 0px;
+
+  max-width: 1000px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.3;
+
+  color: rgba(0, 0, 0, 0.45);
+}
+
+/* about section */
+.about {
+  min-height: 100vh;
+}
+
+/* pill nav */
+.pill-nav {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+
+  isolation: isolate;
+  z-index: 9999;
+}
+
+
+.pill-nav a {
+  padding: 8px 14px;
+  border-radius: 999px;
+
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+
+  color: #000;
+}
+
+.pill-nav a:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* optional smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 4px;
+
+  background-color: currentColor;
+  
+  vertical-align: -0.1em;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
