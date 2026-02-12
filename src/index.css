@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
-/* reset */
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +12,6 @@ body,
   height: 100%;
 }
 
-/* global */
 body {
   background-color: #ffffff;
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
@@ -21,18 +19,16 @@ body {
   color: #000;
 }
 
-/* landing section */
 .landing {
   position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: #ffffff; /* base stays static */
+  background: #ffffff;
   overflow: hidden;
 }
 
-/* gradient layer */
 .landing::before {
   content: "";
   position: absolute;
@@ -40,18 +36,17 @@ body {
 
   background: linear-gradient(
     180deg,
-    #5a85b6 0%,
-    #f3f6fb 45%,
+    #62c1e5 0%,
+    #ffffff 45%,
     #ffffff 85%,
     #ffffff 100%
   );
 
   opacity: 0;
-  animation: gradientFadeIn 1.2s ease-out forwards;
+  animation: gradientFadeIn 3s ease-out forwards;
   z-index: 0;
 }
 
-/* keep content above gradient */
 .landing > * {
   position: relative;
   z-index: 1;
@@ -63,9 +58,6 @@ body {
   }
 }
 
-
-
-/* name at bottom */
 .name-title {
   width: 100%;
   padding-left: 24px;
@@ -80,8 +72,37 @@ body {
   overflow: hidden;
 }
 
+.sub-title {
+  width: 100%;
+  padding-left: 24px; 
+  padding-top: 40px;
+  margin-top: 40px;
+  
+  font-size: 7.5vw; 
+  font-weight: 500; 
+  color: #000000; 
+  
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+.paragraph-text {
+  width: 50%;
+  padding-left: 24px; 
+  margin-top: 40px;
+  
+  font-size: 1.25vw; 
+  font-weight: 100; 
+  color: #000000; 
+  
+  /* white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;  */
+}
+
 .blurb {
-  padding-left: 24px;
+  padding-left: 36px;
   margin-bottom: 0px;
 
   max-width: 1000px;
@@ -92,12 +113,10 @@ body {
   color: rgba(0, 0, 0, 0.45);
 }
 
-/* about section */
 .about {
   min-height: 100vh;
 }
 
-/* pill nav */
 .pill-nav {
   position: fixed;
   top: 24px;
@@ -108,8 +127,8 @@ body {
   gap: 8px;
   padding: 6px;
 
-  background: rgba(255, 255, 255, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 999px;
 
   -webkit-backdrop-filter: blur(16px);
@@ -118,7 +137,6 @@ body {
   isolation: isolate;
   z-index: 9999;
 }
-
 
 .pill-nav a {
   padding: 8px 14px;
@@ -132,10 +150,9 @@ body {
 }
 
 .pill-nav a:hover {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.25);
 }
 
-/* optional smooth scroll */
 html {
   scroll-behavior: smooth;
 }
