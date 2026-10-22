@@ -1,13 +1,52 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/portfolioFavicon.png" type="image/png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jack Koteles</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jack Koteles</title>
+<meta name="description" content="Jack Koteles. CS and Data Science at UW-Madison. I build AI and data tools.">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<style>
+body{margin:40px auto;max-width:650px;line-height:1.6;font-size:20px;font-family:"Cormorant Garamond",Garamond,Georgia,serif;font-weight:500;color:#444;background:#faf6ed;padding:0 10px}
+h1,h2,h3{line-height:1.2;color:#222}
+h2{margin-top:2em}
+a{color:#0645ad}
+ul{padding-left:1.2em}
+small{color:#777}
+@media (prefers-color-scheme:dark){
+  body{color:#ccc;background:#161616}
+  h1,h2,h3{color:#eee}
+  a{color:#8ab4f8}
+  small{color:#999}
+}
+</style>
+</head>
+<body>
+
+<h1>Jack Koteles</h1>
+<p>CS + DS @ UW-Madison · Incoming @ PwC</p>
+<p><a href="mailto:koteles@wisc.edu">koteles@wisc.edu</a> · <a href="https://github.com/jackkoteles">GitHub</a> · <a href="https://www.linkedin.com/in/jackkoteles/">LinkedIn</a> · <a href="resume.pdf" target="_blank">Resume</a></p>
+
+<h2>Education</h2>
+<p><b>University of Wisconsin-Madison</b> - B.S. Computer Science, B.S. Data Science, certificate in Consulting · Madison, WI, expected May 2028.</p>
+
+<h2>Experience</h2>
+<p><b>PwC</b> - incoming AI engineering intern in Advisory, Commercial Technology and Innovation · Chicago, IL, January to May 2027.</p>
+<p><b>AI @ UW</b> - project manager · Madison, WI, February to May 2026; led the design and proposal of an AI-driven clinical intelligence platform for mental health; architected a three-component system: an ambient session engine for clinical signal extraction, a between-session patient check-in layer, and an alerting system that learns patient baselines &amp; flags deviations; ran competitive landscape research to identify and validate an unserved market gap; and mentored team members, managed sprint deadlines, delegated across workstreams &amp; coordinated delivery of the integrated components.</p>
+<p><b>Park Ridge Park District</b> - assistant camp site coordinator · Park Ridge, IL, May 2024 to August 2026; coordinated 10 counselors and 50+ campers, managing daily schedules &amp; staff assignments; served as a primary point of contact for families, communicating updates &amp; resolving concerns; administered first aid and led emergency response for injuries &amp; incidents; and led training sessions on camp policies &amp; safety procedures.</p>
+
+<h2>Projects</h2>
+<p><b>CaseChorus: AI research assistant for SEC filings</b> - answers comparative strategy questions across an industry using only the companies' own SEC filings, with every claim cited to the source text; built end to end as a RAG pipeline from EDGAR ingestion &amp; parsing through chunking, embeddings, retrieval &amp; grounded generation; doubled companies covered per answer (2.7 to 5.4) with no loss in retrieval accuracy using per-company search passes &amp; rule-based selection in a Postgres function; built a 52-question eval set with a holdout split that exposed a bug understating faithfulness by 44 points; and proved the design by loading a second industry from a new config file, exposing six hidden coupling defects. <i>Python, PostgreSQL, Gemini, Next.js/TypeScript</i></p>
+<p><b>Clinical intelligence platform for mental health (AI @ UW)</b> - AI platform for mental health providers that connects in-session analysis with between-session patient monitoring; designed as three parts: an ambient session engine that pulls out clinical signals, a check-in layer for patients between sessions, and an alerting system that learns each patient's baseline &amp; flags changes; and built the foundation from scratch, including the database schema, Supabase &amp; Prisma setup, and GitHub branch protection. <i>Next.js, TypeScript, Prisma, PostgreSQL/Supabase, Gemini</i></p>
+<p><b>NFL play prediction model</b> - predicts whether an NFL play will succeed using pre-snap data like down, distance &amp; field location; analyzed which aspects of a play affect success or failure the most; and exported predictions into Tableau for a clear visual dashboard. <i>Python, PyTorch, pandas, NumPy, nflreadpy</i></p>
+
+<p><b>Heap allocator &amp; cache simulator</b> - wrote a heap allocator in C with block coalescing, and a cache simulator with LRU eviction. <i>C</i></p>
+<p><b>Flask A/B testing app</b> - built a Flask web app with A/B testing, rate limiting &amp; SVG dashboards. <i>Python, Flask</i></p>
+<h2>More about me</h2>
+<p>Outside of the classroom and work, I love sports, specifically football and the Chicago Bears. However, you will most often find me playing ice hockey or on a golf course for my own sporting. I am also an avid runner and will be running my first marathon in Madison this November. I also enjoy playing card games - namely euchre and poker - and am always looking for a game with my friends. During the summers, you will always see me on a lake on the weekends.</p>
+
+</body>
 </html>
